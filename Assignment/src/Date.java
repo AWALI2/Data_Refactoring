@@ -97,29 +97,29 @@ public void setDay(int day)
 }
 public int getMonth( )
 {
-    if (month.equals("January"))
+    if (month.equals("January") || month.equals("Jan"))
         return 1;
-    else if (month.equals("February"))
+    else if (month.equals("February")|| month.equals("Feb"))
         return 2;
-    else if (month.equalsIgnoreCase("March"))
+    else if (month.equalsIgnoreCase("March")|| month.equalsIgnoreCase("Mar"))
         return 3;
-    else if (month.equalsIgnoreCase("April"))
+    else if (month.equalsIgnoreCase("April")|| month.equalsIgnoreCase("Apr"))
         return 4;
     else if (month.equalsIgnoreCase("May"))
         return 5;
-    else if (month.equals("June"))
+    else if (month.equals("June")|| month.equalsIgnoreCase("Jun"))
         return 6;
-    else if (month.equalsIgnoreCase("July"))
+    else if (month.equalsIgnoreCase("July")|| month.equalsIgnoreCase("Jul"))
         return 7;
-    else if (month.equalsIgnoreCase("August"))
+    else if (month.equalsIgnoreCase("August")|| month.equalsIgnoreCase("Aug"))
         return 8;
-    else if (month.equalsIgnoreCase("September"))
+    else if (month.equalsIgnoreCase("September")|| month.equalsIgnoreCase("Sep"))
         return 9;
-    else if (month.equalsIgnoreCase("October"))
+    else if (month.equalsIgnoreCase("October")|| month.equalsIgnoreCase("Oct"))
         return 10;
-    else if (month.equals("November"))
+    else if (month.equals("November")|| month.equalsIgnoreCase("Nov"))
         return 11;
-    else if (month.equals("December"))
+    else if (month.equals("December")|| month.equalsIgnoreCase("Dec"))
         return 12;
     else
     {
@@ -195,36 +195,39 @@ private boolean monthOK(String month)
 }
 private String monthString(int monthNumber)
 {
+	String a;
     switch (monthNumber)
     {
         case 1:
-            return "January";
+        	a= "Jan";
         case 2:
-            return "February";
+            a= "Feb";
         case 3:
-            return "March";
+            a= "Mar";
         case 4:
-            return "April";
+            a= "Apr";
         case 5:
-            return "May";
+            a= "May";
         case 6:
-            return "June";
+            a= "Jun";
         case 7:
-            return "July";
+            a= "Jul";
         case 8:
-            return "August";
+            a= "August";
         case 9:
-            return "September";
+            a= "September";
         case 10:
-            return "October";
+            a= "October";
         case 11:
-            return "November";
+            a= "November";
         case 12:
-            return "December";
+            a= "December";
         default:
             System.out.println("Fatal Error");
             System.exit(0);
-            return "Error"; //to keep the compiler happy
+            a= "Error"; //to keep the compiler happy
+            
+            return a;
     }
 }
 
